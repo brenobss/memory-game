@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MemoryGame from './MemoryGame';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MemoryGame />
   </React.StrictMode>,
   document.getElementById('root')
 );

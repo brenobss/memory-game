@@ -1,13 +1,89 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Righteous', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c7cdd3;
+}
+
+.card{
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  cursor: pointer;
+}
+
+.card_front, .card_back{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.image{
+  width: 65%;
+  height: 65%;
+}
+
+.flip{
+  transform: rotateY(180deg);
+}
+
+.card_front{
+  background-color: #101c2c;
+  transform: rotateY(180deg);
+}
+
+.card_back{
+  color: #101c2c;
+  background-color: #05c3ff;
+  font-size: 25px;
+}
+
+#gameOver{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+
+#restartGame{
+  font-size: 30px;
+  background-color: gold;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.txtGameOver{
+  font-size: 30px;
+}
+
+#board{
+  max-width: 700px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
